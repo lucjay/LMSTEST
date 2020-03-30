@@ -19,7 +19,7 @@ public class MemberDao {
 
 	private final String MEMBER_LIST = "SELECT * FROM member";
 	private final String MEMBER_CHECK = "SELECT * FROM member WHERE id =? and pw=?";
-	private final String MEMBER_INSERT = "INSERT INTO member values(?,?,?,?,?,?,?)";
+	private final String MEMBER_INSERT = "INSERT INTO member values(?,?,?,?,?,?,?,?)";
 	private final String MEMBER_ID_CHECK = "SELECT id FROM member WHERE id =?";
 
 	public MemberDao() {
@@ -48,7 +48,7 @@ public class MemberDao {
 				member.setHobby(rs.getString("hobby"));
 				list.add(member);
 			}
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return list;
@@ -85,6 +85,7 @@ public class MemberDao {
 			psmt.setString(5, member.getTel());
 			psmt.setString(6, member.getGender());
 			psmt.setString(7, member.getHobby());
+			psmt.setString(8, member.getFilename());
 			n = psmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

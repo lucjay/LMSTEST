@@ -8,6 +8,7 @@ public class MemberVo {
 	private String tel;
 	private String gender;
 	private String hobby;
+	private String filename; // 사진명
 
 	public MemberVo() {
 
@@ -72,6 +73,14 @@ public class MemberVo {
 
 	public void setHobby(String hobby) {
 		this.hobby = hobby;
+	}
+
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
 
 }

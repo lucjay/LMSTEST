@@ -27,7 +27,8 @@
 			<div class="w3-higt-padding" style="margin: 0 -16px 8px 300px">
 				<div class="w3-half">
 					<form id="frm" name="frm" action="memberInsert.do" method="post"
-						target="_blank" onSubmit="logincall();return false">
+						target="_blank" onSubmit="logincall();return false"
+						enctype="Multipart/form-data">
 						<p>
 							<input class="w3-input w3-border" type="text" placeholder="＊NAME"
 								name="name" id="name" required>
@@ -64,6 +65,13 @@
 							<input type="checkbox" id="hobby" name="hobby" value="음악 ">음악&nbsp;
 							<input type="checkbox" id="hobby" name="hobby" value="기타 ">기타
 						</p>
+						<p>
+							<input class="w3-input w3-border" type="file" placeholder="PHOTO"
+								name="filename" id="filename">
+						</p>
+
+
+
 						<button class="w3-button w3-black" type="submit"
 							onclick="formDataCheck()" value="JOIN">
 							<i class="fa fa-paper-plane"></i> JOIN
