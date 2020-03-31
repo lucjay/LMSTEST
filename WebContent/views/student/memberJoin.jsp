@@ -70,8 +70,6 @@
 								name="filename" id="filename">
 						</p>
 
-
-
 						<button class="w3-button w3-black" type="submit"
 							onclick="formDataCheck()" value="JOIN">
 							<i class="fa fa-paper-plane"></i> JOIN
